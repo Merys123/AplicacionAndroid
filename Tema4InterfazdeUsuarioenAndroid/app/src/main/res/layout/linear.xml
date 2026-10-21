@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Espaciador superior optimizado con Space en lugar de un LinearLayout vacío -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <Spinner
+        android:id="@+id/miSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opción 1" />
+
+    <TextView
+        android:id="@+id/textoej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World 2"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/boton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Trasladar texto" />
+
+    <Button
+        android:id="@+id/boton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Rotar texto" />
+
+    <Button
+        android:id="@+id/boton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Detener texto" />
+
+    <ToggleButton
+        android:id="@+id/boton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:textOff="No pulsado"
+        android:textOn="Pulsado" />
+
+    <!-- Se añade contentDescription a los ImageButton por accesibilidad -->
+    <ImageButton
+        android:id="@+id/panda"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:contentDescription="Imagen de un panda"
+        android:src="@drawable/imagen" />
+
+    <ImageButton
+        android:id="@+id/iris"
+        android:layout_width="99dp"
+        android:layout_height="111dp"
+        android:contentDescription="Imagen de un iris"
+        android:src="@drawable/imagen2" />
+
+    <!-- Corrección en inputType para teléfonos -->
+    <EditText
+        android:id="@+id/numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su número de teléfono"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/textoEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese correo electrónico"
+        android:inputType="textEmailAddress" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionHint="Elige una opción"
+        android:completionThreshold="4" />
+
+
+
+</LinearLayout>
