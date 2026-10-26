@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="4"
+    android:rowCount="5"
+    android:useDefaultMargins="true">
+
+    <TextView
+        android:id="@+id/pantalla"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_columnSpan="4"
+        android:gravity="right|center_vertical"
+        android:text="0"
+        android:textSize="25sp"
+        android:background="#D3D3D3"
+        android:padding="5dp"/>
+
+    <Button android:id="@+id/boton7" android:text="7"/>
+    <Button android:id="@+id/boton8" android:text="8"/>
+    <Button android:id="@+id/boton9" android:text="9"/>
+    <Button android:id="@+id/botonDividir" android:text="/"/>
+
+    <Button android:id="@+id/boton4" android:text="4"/>
+    <Button android:id="@+id/boton5" android:text="5"/>
+    <Button android:id="@+id/boton6" android:text="6"/>
+    <Button android:id="@+id/botonMultiplicar" android:text="*"/>
+
+    <Button android:id="@+id/boton1" android:text="1"/>
+    <Button android:id="@+id/boton2" android:text="2"/>
+    <Button android:id="@+id/boton3" android:text="3"/>
+    <Button android:id="@+id/botonResta" android:text="-"/>
+
+    <Button android:id="@+id/boton0" android:text="0"/>
+    <Button android:id="@+id/botonPunto" android:text="."/>
+    <Button android:id="@+id/botonIgual" android:text="="/>
+    <Button android:id="@+id/botonSuma" android:text="+"/>
+
+    <Button
+        android:id="@+id/botonBorrar"
+        android:text="C"
+        android:layout_columnSpan="4"
+        android:layout_width="match_parent"/>
+
+</GridLayout>

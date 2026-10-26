@@ -10,13 +10,14 @@
     android:useDefaultMargins="true">
 
     <TextView
+        android:id="@+id/pantalla"
         android:layout_width="375dp"
         android:layout_height="50dp"
         android:layout_columnSpan="4"
         android:gravity="right"
         android:text="0"
         android:textSize="30sp"
-        android:background="#D3D3D3"
+        android:background="#D3D3D3"/>
 
     <Button
         android:id="@+id/boton7"
