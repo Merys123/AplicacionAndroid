@@ -1,4 +1,5 @@
 
+
 package com.example.calculadoraprincipal;
 
 import android.os.Bundle;
@@ -6,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         pantalla = findViewById(R.id.pantalla);
@@ -31,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 R.id.boton0, R.id.boton1, R.id.boton2,
                 R.id.boton3, R.id.boton4, R.id.boton5,
                 R.id.boton6, R.id.boton7, R.id.boton8,
-                R.id.boton9, R.id.botonSuma, R.id.botonResta,
+                R.id.boton9, R.id.botonPunto,
+                R.id.botonSuma, R.id.botonResta,
                 R.id.botonMultiplicar, R.id.botonDividir,
-                R.id.botonIgual, R.id.botonBorrar, R.id.botonPunto
+                R.id.botonIgual, R.id.botonAC, R.id.botonC
         };
 
         for (int id : botones) {
@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (nuevoNumero) {
                             entrada = texto;
+                        } else if (entrada.equals("0")) {
+                            entrada = texto.equals("0") ? "0" : texto;
                         } else {
                             entrada += texto;
                         }
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             pantalla.setText(operacion + " " + entrada);
                         }
 
-                    } else if (texto.equals("C")) {
+                    } else if (texto.equals("AC")) {
 
                         pantalla.setText("0");
                         numero1 = 0;
@@ -86,9 +88,31 @@ public class MainActivity extends AppCompatActivity {
                         entrada = "";
                         nuevoNumero = true;
 
+                    } else if (texto.equals("C")) {
+
+                        if (!entrada.isEmpty()) {
+                            entrada = entrada.substring(0, entrada.length() - 1);
+                        } else if (!operador.equals("")) {
+                            operador = "";
+                            operacion = "";
+                        }
+
+                        if (entrada.isEmpty()) {
+                            entrada = "0";
+                        }
+
+                        nuevoNumero = false;
+
+                        if (operador.equals("")) {
+                            pantalla.setText(entrada);
+                        } else {
+                            pantalla.setText(operacion + " " + entrada);
+                        }
+
                     } else if (texto.equals("=")) {
 
-                        if (operador.equals("") || entrada.isEmpty()) {
+                        if (operador.equals("") || entrada.isEmpty()
+                                || entrada.equals(".")) {
                             return;
                         }
 
@@ -99,36 +123,40 @@ public class MainActivity extends AppCompatActivity {
                             case "+":
                                 resultado = numero1 + numero2;
                                 break;
+
                             case "-":
                                 resultado = numero1 - numero2;
                                 break;
+
                             case "*":
                                 resultado = numero1 * numero2;
                                 break;
+
                             case "/":
                                 if (numero2 == 0) {
                                     pantalla.setText("Error");
                                     operador = "";
+                                    operacion = "";
                                     entrada = "";
                                     nuevoNumero = true;
                                     return;
                                 }
+
                                 resultado = numero1 / numero2;
                                 break;
                         }
 
-                        pantalla.setText(operacion + " "
-                                + formatear(numero2) + " = "
-                                + formatear(resultado));
-
                         entrada = formatear(resultado);
+                        pantalla.setText(entrada);
+
                         operador = "";
                         operacion = "";
                         nuevoNumero = true;
 
                     } else {
 
-                        if (entrada.isEmpty() || !operador.equals("")) {
+                        if (entrada.isEmpty() || entrada.equals(".")
+                                || !operador.equals("")) {
                             return;
                         }
 
