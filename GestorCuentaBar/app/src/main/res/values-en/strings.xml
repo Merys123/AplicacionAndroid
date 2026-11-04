@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Bar Management</string>
+    <string name="titulo">BILL MANAGEMENT</string>
+    <string name="cuenta">Bill total (€)</string>
+    <string name="introducir_cuenta">Enter the amount</string>
+    <string name="camarero">Waiter's name</string>
+    <string name="introducir_camarero">Enter the name</string>
+    <string name="propina">Include tip</string>
+    <string name="porcentaje">Tip percentage</string>
+    <string name="metodo_pago">Payment method</string>
+    <string name="efectivo">Cash</string>
+    <string name="tarjeta">Card</string>
+    <string name="valoracion">Rate the service</string>
+    <string name="calcular">CALCULATE TOTAL</string>
+
+    <string name="total_cuenta">Bill:</string>
+    <string name="total_propina">Tip:</string>
+    <string name="total_final">TOTAL:</string>
+    <string name="resultado_pago">Payment method:</string>
+    <string name="resultado_valoracion">Rating:</string>
+
+    <string name="error_vacio">Please enter the bill amount.</string>
+    <string name="error_formato">Enter a valid number.</string>
+    <string name="error_valor">The bill must be greater than 0.</string>
+    <string name="error_pago">Select a payment method.</string>
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EFE6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp"
+        android:background="#F5EFE6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textColor="#593D2B"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuenta"
+            android:textColor="#593D2B"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/introducir_cuenta"
+            android:inputType="numberDecimal|numberSigned"
+            android:backgroundTint="#9B7653"
+            android:textColor="#593D2B"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camarero"
+            android:textColor="#593D2B"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/etCamarero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/introducir_camarero"
+            android:inputType="textCapWords"
+            android:completionThreshold="3"
+            android:backgroundTint="#9B7653"
+            android:textColor="#593D2B"
+            android:layout_marginBottom="15dp"/>
+
+        <CheckBox
+            android:id="@+id/cbPropina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/propina"
+            android:textColor="#593D2B"
+            android:buttonTint="#795438"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/porcentaje"
+            android:textColor="#593D2B"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/sbPropina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            android:progress="10"
+            android:progressTint="#795438"
+            android:thumbTint="#795438"
+            android:progressBackgroundTint="#D8C5AE"/>
+
+        <TextView
+            android:id="@+id/tvPorcentaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textColor="#795438"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metodo_pago"
+            android:textColor="#593D2B"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbEfectivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/efectivo"
+                android:textColor="#593D2B"
+                android:buttonTint="#795438"/>
+
+            <RadioButton
+                android:id="@+id/rbTarjeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tarjeta"
+                android:textColor="#593D2B"
+                android:buttonTint="#795438"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valoracion"
+            android:textColor="#593D2B"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"/>
+
+        <RatingBar
+            android:id="@+id/rbValoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="3"
+            android:progressTint="#D49A32"
+            android:secondaryProgressTint="#D8C5AE"/>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/calcular"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#795438"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#593D2B"
+            android:padding="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#E9DDCE"/>
+
+    </LinearLayout>
+
+</ScrollView>
