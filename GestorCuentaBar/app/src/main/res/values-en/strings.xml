@@ -3,7 +3,7 @@
     <string name="titulo">BILL MANAGEMENT</string>
     <string name="cuenta">Bill total (€)</string>
     <string name="introducir_cuenta">Enter the amount</string>
-    <string name="camarero">Waiter's name</string>
+    <string name="camarero">Waiters name</string>
     <string name="introducir_camarero">Enter the name</string>
     <string name="propina">Include tip</string>
     <string name="porcentaje">Tip percentage</string>
