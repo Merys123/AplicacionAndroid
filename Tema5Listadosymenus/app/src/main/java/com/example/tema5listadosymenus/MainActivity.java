@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,24 +29,16 @@ public class MainActivity extends AppCompatActivity {
                 "Grecia", "Italia"
         );
 
-        // Configurar el ListView y el TextView
-        ListView listView = findViewById(R.id.listView);
-        TextView textView = findViewById(R.id.textView);
+        // Configurar el ListView y asignarle el adaptador
+        GridView listado = findViewById(R.id.gridView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        listado.setAdapter(adapter);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, data);
-
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int posicion, long l) {
-
-                // Obtener el país seleccionado
+                //Obtener el texto del elemento pulsado
                 String elemento = (String) parent.getItemAtPosition(posicion);
-
-                // Mostrar el país en el TextView
-                textView.setText(elemento);
             }
         });
     }
